@@ -3,7 +3,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
     rel="stylesheet"
   />
 </head>
@@ -16,15 +20,17 @@
     <div id="section-1-content">
       <div id="section-1-content-info">
         <p>Saturday, 07 June 2025</p>
-        <p>Villa Anton, Cesi (TR), Italia</p>
-        <p><a href="">Google Maps</a></p>
+        <p>Strada di Condotto 14, Cesi (TR), Italia</p>
+        <p>
+          <a
+            href="https://maps.app.goo.gl/mrKKs23LpQrVGNNA6?g_st=com.google.maps.preview.copy"
+            >Google Maps</a
+          >
+        </p>
         <p><a id="section-1-content-info-rsvp" href="">RSVP</a></p>
       </div>
       <div id="section-1-content-image-container">
-        <img
-          id="section-1-content-image"
-          src="https://static.wixstatic.com/media/c837a6_565b02b9f1764a65809f05c31ceae965~mv2.jpg/v1/fill/w_1474,h_1696,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_565b02b9f1764a65809f05c31ceae965~mv2.jpg"
-        />
+        <img id="section-1-content-image" src="lovegraph_30.jpg" />
       </div>
     </div>
   </div>
@@ -36,7 +42,7 @@
     position: relative;
     width: 100%;
     margin-top: 128px;
-    padding-bottom: 128px;
+    padding-bottom: 256px;
   }
 
   #section-1-headers {
@@ -81,6 +87,10 @@
     display: inline-block;
   }
 
+  #section-1-content-info-rsvp:hover {
+    background-color: #014d4e;
+  }
+
   #section-1-content-image-container {
     width: 540px;
   }
@@ -97,6 +107,10 @@
 
   body {
     margin: 0px;
-    background-color: snow;
+    background-color: white;
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
   }
 </style>
