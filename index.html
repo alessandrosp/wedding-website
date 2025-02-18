@@ -1,5 +1,7 @@
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <title>❤️💐</title>
     <!-- Google Fonts links. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,8 +31,10 @@
             >
               <div class="flex items-center cursor-pointer">
                 <label
+                  id="section-1-language-selector-en"
                   for="horizontal-list-radio-license"
-                  class="w-full py-3 text-sm font-medium text-gray-900 text-center cursor-pointer bg-[teal] text-white"
+                  class="w-full py-3 text-sm font-medium text-gray-900 text-center cursor-pointer hover:bg-[teal]/80 hover:text-white"
+                  onclick="setLanguage('en')"
                   >English
                 </label>
               </div>
@@ -40,8 +44,10 @@
             >
               <div class="flex items-center cursor-pointer">
                 <label
+                  id="section-1-language-selector-it"
                   for="horizontal-list-radio-military"
                   class="w-full py-3 text-sm font-medium text-gray-900 text-center cursor-pointer hover:bg-[teal]/80 hover:text-white"
+                  onclick="setLanguage('it')"
                   >Italian</label
                 >
               </div>
@@ -49,8 +55,10 @@
             <li class="w-full">
               <div class="flex items-center">
                 <label
+                  id="section-1-language-selector-ja"
                   for="horizontal-list-radio-passport"
                   class="w-full py-3 text-sm font-medium text-gray-900 text-center cursor-pointer hover:bg-[teal]/80 hover:text-white"
+                  onclick="setLanguage('ja')"
                   >Japanese</label
                 >
               </div>
@@ -62,10 +70,12 @@
           class="relative left-1/2 transform -translate-x-1/2 w-fit"
         >
           <h2 id="section-1-header-intro" class="text-[32px] -mb-[8px]">
-            You are invited to our wedding!
+            You are invited to celebrate our wedding!
           </h2>
           <h1 id="section-1-header-names" class="text-[96px] mt-[0px]">
-            ALESSANDRO & YUIKA
+            <span class="i18n" lang="en">ALESSANDRO & YUIKA</span>
+            <span class="i18n" lang="it">ALESSANDRO & YUIKA</span>
+            <span class="i18n" lang="ja">アレッサンドロ と 結花</span>
           </h1>
         </div>
         <div
@@ -148,6 +158,22 @@
     background-color: #e8e6e6;
   }
 
+  .i18n {
+    display: none;
+  }
+
+  :lang(en) .i18n[lang="en"] {
+    display: inline;
+  }
+
+  :lang(it) .i18n[lang="it"] {
+    display: inline;
+  }
+
+  :lang(ja) .i18n[lang="ja"] {
+    display: inline;
+  }
+
   body {
     margin: 0px;
     background-color: white;
@@ -157,3 +183,52 @@
     font-style: normal;
   }
 </style>
+
+<script>
+  function setLanguage(lang) {
+    if (lang === "en") {
+      document.documentElement.setAttribute("lang", "en");
+      document
+        .getElementById("section-1-language-selector-en")
+        .classList.add("bg-[teal]", "text-white");
+      document
+        .getElementById("section-1-language-selector-it")
+        .classList.remove("bg-[teal]", "text-white");
+      document
+        .getElementById("section-1-language-selector-ja")
+        .classList.remove("bg-[teal]", "text-white");
+    } else if (lang === "it") {
+      document.documentElement.setAttribute("lang", "it");
+      document
+        .getElementById("section-1-language-selector-en")
+        .classList.remove("bg-[teal]", "text-white");
+      document
+        .getElementById("section-1-language-selector-it")
+        .classList.add("bg-[teal]", "text-white");
+      document
+        .getElementById("section-1-language-selector-ja")
+        .classList.remove("bg-[teal]", "text-white");
+    } else if (lang === "ja") {
+      document.documentElement.setAttribute("lang", "ja");
+      document
+        .getElementById("section-1-language-selector-en")
+        .classList.remove("bg-[teal]", "text-white");
+      document
+        .getElementById("section-1-language-selector-it")
+        .classList.remove("bg-[teal]", "text-white");
+      document
+        .getElementById("section-1-language-selector-ja")
+        .classList.add("bg-[teal]", "text-white");
+    }
+  }
+
+  // We set the language based on the user's browser settings if the language
+  // is one of the support languages, otherwise we set it to English.
+  window.onload = function () {
+    if (["en", "it", "ja"].includes(navigator.language)) {
+      setLanguage(navigator.language);
+    } else {
+      setLanguage("en");
+    }
+  };
+</script>
