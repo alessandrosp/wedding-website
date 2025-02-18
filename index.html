@@ -1,95 +1,97 @@
-<head>
-  <!-- Google Fonts links. -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-    rel="stylesheet"
-  />
-</head>
-<main>
-  <div id="section-1">
-    <div id="section-1-headers">
-      <h2 id="section-1-header-intro">We're Getting Married</h2>
-      <h1 id="section-1-header-names">ALESSANDRO & YUIKA</h1>
-    </div>
-    <div id="section-1-content">
-      <div id="section-1-content-info">
-        <p>Saturday, 07 June 2025</p>
-        <p>Strada di Condotto 14, Cesi (TR)</p>
-        <p>
-          <a
-            href="https://maps.app.goo.gl/mrKKs23LpQrVGNNA6?g_st=com.google.maps.preview.copy"
-            >Google Maps</a
+<html>
+  <head>
+    <!-- Google Fonts links. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS. -->
+    <link href="tailwind.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <div id="section-1" class="relative w-full mt-[128px] pb-[256px]">
+        <div
+          id="section-1-headers"
+          class="relative left-1/2 transform -translate-x-1/2 w-fit"
+        >
+          <h2 id="section-1-header-intro" class="text-[32px] -mb-[8px]">
+            You are invited to our wedding!
+          </h2>
+          <h1 id="section-1-header-names" class="text-[96px] mt-[0px]">
+            ALESSANDRO & YUIKA
+          </h1>
+        </div>
+        <div
+          id="section-1-content"
+          class="relative left-1/2 -translate-x-1/2 w-fit flex pt-[32px]"
+        >
+          <div
+            id="section-1-content-info"
+            class="text-[24px] mr-[48px] grid gap-4 pt-[32px]"
           >
-        </p>
-        <p><a id="section-1-content-info-rsvp" href="">RSVP</a></p>
+            <p>Saturday, 07 June 2025</p>
+            <p>Strada di Condotto 14, Cesi (TR)</p>
+            <p>
+              <a
+                href="https://maps.app.goo.gl/mrKKs23LpQrVGNNA6?g_st=com.google.maps.preview.copy"
+                class="text-blue-600 dark:text-blue-500 underline hover:text-blue-800 dark:hover:text-blue-400"
+                >Google Maps</a
+              >
+            </p>
+            <p>
+              <a
+                id="section-1-content-info-rsvp"
+                href=""
+                class="bg-[teal] text-white rounded-2xl px-[36px] py-[12px] cursor-pointer hover:bg-[teal]/80 mt-[8px] inline-block"
+                >RSVP</a
+              >
+            </p>
+          </div>
+          <div id="section-1-content-image-container">
+            <img id="section-1-content-image" src="lovegraph_30.jpg" />
+          </div>
+        </div>
       </div>
-      <div id="section-1-content-image-container">
-        <img id="section-1-content-image" src="lovegraph_30.jpg" />
+      <div id="section-2">
+        <div
+          id="section-2-content"
+          class="text-[20px] w-[900px] relative pt-[220px] left-1/2 -translate-x-1/2"
+        >
+          <h1 class="text-[32px]">The Program</h1>
+          <p>Note that details are TBD.</p>
+          <ul class="list-disc list-inside">
+            <li>The wedding begins ~10:30am.</li>
+            <li>Small ceremony ~11:00am.</li>
+            <li>Lunch ~12:00pm.</li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </div>
-  <div id="section-2"></div>
-</main>
+      <div id="section-3" class="mb-[128px]">
+        <div
+          id="section-3-content"
+          class="text-[20px] w-[900px] relative pt-[36px] left-1/2 -translate-x-1/2"
+        >
+          <h1 class="text-[32px]">Frequetly Asked Questions</h1>
+          <h2 class="text-[24px]">What's the dress code?</h2>
+          <p>Dress like unicorns.</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
 
 <style>
-  #section-1 {
-    position: relative;
-    width: 100%;
-    margin-top: 128px;
-    padding-bottom: 256px;
-  }
-
   #section-1-headers {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: fit-content;
     font-family: "Cormorant Garamond", serif;
     font-weight: 400;
     font-style: normal;
-  }
-
-  #section-1-header-intro {
-    font-size: 32px;
-    margin-bottom: 4px;
-  }
-
-  #section-1-header-names {
-    font-size: 96px;
-    margin-top: 0px;
-  }
-
-  #section-1-content {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: fit-content;
-    display: flex;
-  }
-
-  #section-1-content-info {
-    font-size: 24px;
-    margin-right: 48px;
-  }
-
-  #section-1-content-info-rsvp {
-    background-color: teal;
-    color: white;
-    border-radius: 24px;
-    padding: 12px 36px;
-    text-decoration: none;
-    margin-top: 8px;
-    display: inline-block;
-  }
-
-  #section-1-content-info-rsvp:hover {
-    background-color: #014d4e;
   }
 
   #section-1-content-image-container {
