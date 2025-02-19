@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <!-- Tailwind CSS. -->
     <link href="tailwind.css" rel="stylesheet" />
   </head>
@@ -48,7 +49,7 @@
                   for="horizontal-list-radio-military"
                   class="w-full py-3 text-sm font-medium text-gray-900 text-center cursor-pointer hover:bg-[teal]/80 hover:text-white"
                   onclick="setLanguage('it')"
-                  >Italian</label
+                  >Italiano</label
                 >
               </div>
             </li>
@@ -57,9 +58,9 @@
                 <label
                   id="section-1-language-selector-ja"
                   for="horizontal-list-radio-passport"
-                  class="w-full py-3 text-sm font-medium text-gray-900 text-center cursor-pointer hover:bg-[teal]/80 hover:text-white"
+                  class="w-full py-3 text-sm font-medium text-gray-900 text-center cursor-pointer hover:bg-[teal]/80 hover:text-white japanese"
                   onclick="setLanguage('ja')"
-                  >Japanese</label
+                  >日本語</label
                 >
               </div>
             </li>
@@ -70,12 +71,14 @@
           class="relative left-1/2 transform -translate-x-1/2 w-fit"
         >
           <h2 id="section-1-header-intro" class="text-[32px] -mb-[8px]">
-            You are invited to celebrate our wedding!
+            <span class="i18n" lang="en">You are invited to celebrate our wedding!</span>
+            <span class="i18n" lang="it">Vieni a celebrare il nostro matrimonio con noi!</span>
+            <span class="i18n japanese" lang="ja">私たちの結婚のお祝いにぜひお越しください！</span>
           </h2>
           <h1 id="section-1-header-names" class="text-[96px] mt-[0px]">
             <span class="i18n" lang="en">ALESSANDRO & YUIKA</span>
             <span class="i18n" lang="it">ALESSANDRO & YUIKA</span>
-            <span class="i18n" lang="ja">アレッサンドロ と 結花</span>
+            <span class="i18n japanese" lang="ja">アレッサンドロ と 結花</span>
           </h1>
         </div>
         <div
@@ -86,7 +89,11 @@
             id="section-1-content-info"
             class="text-[24px] mr-[48px] grid gap-4 pt-[32px]"
           >
-            <p>Saturday, 07 June 2025</p>
+            <p>
+              <span class="i18n" lang="en">Saturday, 07 June 2025</span>
+              <span class="i18n" lang="it">Sabato, 07 Giugno 2025</span>
+              <span class="i18n japanese" lang="ja">2025年6月7日(土)</span>
+            </p>
             <p>Strada di Condotto 14, Cesi (TR)</p>
             <p>
               <a
@@ -104,23 +111,55 @@
               >
             </p>
           </div>
-          <div id="section-1-content-image-container">
-            <img id="section-1-content-image" src="lovegraph_30.jpg" />
+          <div id="section-1-content-image-container" class="w-[540px]">
+            <img id="section-1-content-image" src="lovegraph_30.jpg" class="w-[540px] absolute" />
           </div>
         </div>
       </div>
-      <div id="section-2">
+      <div id="section-2" class="bg-[#e8e6e6] pb-[64px]">
         <div
           id="section-2-content"
           class="text-[20px] w-[900px] relative pt-[220px] left-1/2 -translate-x-1/2"
         >
           <h1 class="text-[32px]">The Program</h1>
           <p>Note that details are TBD.</p>
-          <ul class="list-disc list-inside">
-            <li>The wedding begins ~10:30am.</li>
-            <li>Small ceremony ~11:00am.</li>
-            <li>Lunch ~12:00pm.</li>
-          </ul>
+          <div class="grid grid-cols-12 mt-[12px] gap-4">
+            <h2 class="text-[24px] col-span-1">01.</h2>
+            <h2 class="text-[24px] col-span-11 bold">Welcoming Drinks</h2>
+            <p class="col-span-1"></p>
+            <p class="col-span-11">
+              Guests are invited to arrive at the venue ~11am.
+            </p>
+            <h2 class="text-[24px] col-span-1">02.</h2>
+            <h2 class="text-[24px] col-span-11 bold">Cerimony</h2>
+            <p class="col-span-1"></p>
+            <p class="col-span-11">
+              Guests are invited to arrive at the venue ~11am.
+            </p>
+            <h2 class="text-[24px] col-span-1">03.</h2>
+            <h2 class="text-[24px] col-span-11 bold">Photos</h2>
+            <p class="col-span-1"></p>
+            <p class="col-span-11">
+              Guests are invited to arrive at the venue ~11am.
+            </p>
+            <h2 class="text-[24px] col-span-1">04.</h2>
+            <h2 class="text-[24px] col-span-11 bold">Lunch</h2>
+            <p class="col-span-1"></p>
+            <p class="col-span-11">
+              Guests are invited to arrive at the venue ~11am.
+            </p>
+            <h2 class="text-[24px] col-span-1">05.</h2>
+            <h2 class="text-[24px] col-span-11 bold">Chill Time</h2>
+            <p class="col-span-1"></p>
+            <p class="col-span-11">
+              Guests are invited to arrive at the venue ~11am.
+            </p>
+          </div>
+          <div class="flex flex-row gap-4 w-full mt-[64px]">
+            <img src="lovegraph_91_cropped.jpg" class="w-1/3" />
+            <img src="lovegraph_97_cropped.jpg" class="w-1/3" />
+            <img src="lovegraph_73_cropped.jpg" class="w-1/3" />
+          </div>
         </div>
       </div>
       <div id="section-3" class="mb-[128px]">
@@ -133,6 +172,17 @@
             <h2 class="text-[24px]">What's the dress code?</h2>
             <p>
               Semi-formal. Dresses for women, for men a jacket is recommended.
+            </p>
+          </div>
+          <div>
+            <h2 class="text-[24px]">Accessibility and parking</h2>
+            <h3 class="text-[18px]">Option 1</h3>
+            <p>
+              Something.
+            </p>
+            <h3 class="text-[18px]">Option 2</h3>
+            <p>
+              Something else.
             </p>
           </div>
           <div>
@@ -158,18 +208,11 @@
     font-style: normal;
   }
 
-  #section-1-content-image-container {
-    width: 540px;
-  }
-
-  #section-1-content-image {
-    width: 540px;
-    position: absolute;
-  }
-
-  #section-2 {
-    height: 800px;
-    background-color: #e8e6e6;
+  .japanese {
+    font-family: "Noto Sans JP", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
   }
 
   .i18n {
